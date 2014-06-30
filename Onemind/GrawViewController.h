@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  GrawViewController.h
 //  Onemind
 //
 //  Created by yinliping on 14-6-30.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface GrawViewController : UIViewController
+
+@end
+
+@interface ReferenceView : UIView
 
 @end

@@ -12,15 +12,25 @@
 		5ABDAC71196187D700AFF6C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABDAC70196187D700AFF6C9 /* UIKit.framework */; };
 		5ABDAC77196187D700AFF6C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDAC75196187D700AFF6C9 /* InfoPlist.strings */; };
 		5ABDAC79196187D700AFF6C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDAC78196187D700AFF6C9 /* main.m */; };
-		5ABDAC7D196187D700AFF6C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDAC7C196187D700AFF6C9 /* AppDelegate.m */; };
-		5ABDAC80196187D700AFF6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDAC7E196187D700AFF6C9 /* Main.storyboard */; };
-		5ABDAC83196187D700AFF6C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDAC82196187D700AFF6C9 /* ViewController.m */; };
+		5ABDAC7D196187D700AFF6C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDAC7C196187D700AFF6C9 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5ABDAC85196187D700AFF6C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDAC84196187D700AFF6C9 /* Images.xcassets */; };
 		5ABDAC8C196187D700AFF6C9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABDAC8B196187D700AFF6C9 /* XCTest.framework */; };
 		5ABDAC8D196187D700AFF6C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABDAC6C196187D600AFF6C9 /* Foundation.framework */; };
 		5ABDAC8E196187D700AFF6C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABDAC70196187D700AFF6C9 /* UIKit.framework */; };
 		5ABDAC96196187D700AFF6C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDAC94196187D700AFF6C9 /* InfoPlist.strings */; };
 		5ABDAC98196187D700AFF6C9 /* OnemindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDAC97196187D700AFF6C9 /* OnemindTests.m */; };
+		5ABDACA219618D6800AFF6C9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABDACA119618D6800AFF6C9 /* QuartzCore.framework */; };
+		5ABDACB319618DAC00AFF6C9 /* BezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDACA519618DAC00AFF6C9 /* BezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5ABDACB419618DAC00AFF6C9 /* CatmullRomSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDACA719618DAC00AFF6C9 /* CatmullRomSpline.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5ABDACB519618DAC00AFF6C9 /* CubicBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDACAA19618DAC00AFF6C9 /* CubicBezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5ABDACB619618DAC00AFF6C9 /* LinearBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDACAC19618DAC00AFF6C9 /* LinearBezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5ABDACB719618DAC00AFF6C9 /* NSArray_PointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDACAE19618DAC00AFF6C9 /* NSArray_PointArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5ABDACB819618DAC00AFF6C9 /* QuadraticBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDACB019618DAC00AFF6C9 /* QuadraticBezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5ABDACB919618DAC00AFF6C9 /* Spline.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDACB219618DAC00AFF6C9 /* Spline.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5ABDACBD19618E0C00AFF6C9 /* GrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDACBB19618E0C00AFF6C9 /* GrawViewController.m */; };
+		5ABDACBE19618E0C00AFF6C9 /* GrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDACBC19618E0C00AFF6C9 /* GrawViewController.xib */; };
+		5ABDACC019618ECE00AFF6C9 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDACBF19618ECE00AFF6C9 /* MainWindow.xib */; };
+		5ABDACC3196190B000AFF6C9 /* SmoothLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDACC2196190B000AFF6C9 /* SmoothLineView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +54,34 @@
 		5ABDAC7A196187D700AFF6C9 /* Onemind-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Onemind-Prefix.pch"; sourceTree = "<group>"; };
 		5ABDAC7B196187D700AFF6C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5ABDAC7C196187D700AFF6C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5ABDAC7F196187D700AFF6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5ABDAC81196187D700AFF6C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5ABDAC82196187D700AFF6C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5ABDAC84196187D700AFF6C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5ABDAC8A196187D700AFF6C9 /* OnemindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnemindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ABDAC8B196187D700AFF6C9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5ABDAC93196187D700AFF6C9 /* OnemindTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnemindTests-Info.plist"; sourceTree = "<group>"; };
 		5ABDAC95196187D700AFF6C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5ABDAC97196187D700AFF6C9 /* OnemindTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnemindTests.m; sourceTree = "<group>"; };
+		5ABDACA119618D6800AFF6C9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5ABDACA419618DAC00AFF6C9 /* BezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurve.h; sourceTree = "<group>"; };
+		5ABDACA519618DAC00AFF6C9 /* BezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurve.m; sourceTree = "<group>"; };
+		5ABDACA619618DAC00AFF6C9 /* CatmullRomSpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatmullRomSpline.h; sourceTree = "<group>"; };
+		5ABDACA719618DAC00AFF6C9 /* CatmullRomSpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatmullRomSpline.m; sourceTree = "<group>"; };
+		5ABDACA819618DAC00AFF6C9 /* CGPointArithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointArithmetic.h; sourceTree = "<group>"; };
+		5ABDACA919618DAC00AFF6C9 /* CubicBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicBezierCurve.h; sourceTree = "<group>"; };
+		5ABDACAA19618DAC00AFF6C9 /* CubicBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicBezierCurve.m; sourceTree = "<group>"; };
+		5ABDACAB19618DAC00AFF6C9 /* LinearBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearBezierCurve.h; sourceTree = "<group>"; };
+		5ABDACAC19618DAC00AFF6C9 /* LinearBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearBezierCurve.m; sourceTree = "<group>"; };
+		5ABDACAD19618DAC00AFF6C9 /* NSArray_PointArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_PointArray.h; sourceTree = "<group>"; };
+		5ABDACAE19618DAC00AFF6C9 /* NSArray_PointArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_PointArray.m; sourceTree = "<group>"; };
+		5ABDACAF19618DAC00AFF6C9 /* QuadraticBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticBezierCurve.h; sourceTree = "<group>"; };
+		5ABDACB019618DAC00AFF6C9 /* QuadraticBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticBezierCurve.m; sourceTree = "<group>"; };
+		5ABDACB119618DAC00AFF6C9 /* Spline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spline.h; sourceTree = "<group>"; };
+		5ABDACB219618DAC00AFF6C9 /* Spline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spline.m; sourceTree = "<group>"; };
+		5ABDACBA19618E0C00AFF6C9 /* GrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrawViewController.h; sourceTree = "<group>"; };
+		5ABDACBB19618E0C00AFF6C9 /* GrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrawViewController.m; sourceTree = "<group>"; };
+		5ABDACBC19618E0C00AFF6C9 /* GrawViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrawViewController.xib; sourceTree = "<group>"; };
+		5ABDACBF19618ECE00AFF6C9 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		5ABDACC1196190B000AFF6C9 /* SmoothLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothLineView.h; sourceTree = "<group>"; };
+		5ABDACC2196190B000AFF6C9 /* SmoothLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothLineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ABDACA219618D6800AFF6C9 /* QuartzCore.framework in Frameworks */,
 				5ABDAC6F196187D600AFF6C9 /* CoreGraphics.framework in Frameworks */,
 				5ABDAC71196187D700AFF6C9 /* UIKit.framework in Frameworks */,
 				5ABDAC6D196187D600AFF6C9 /* Foundation.framework in Frameworks */,
@@ -101,6 +131,8 @@
 		5ABDAC6B196187D600AFF6C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5ABDACA319618DAC00AFF6C9 /* spline */,
+				5ABDACA119618D6800AFF6C9 /* QuartzCore.framework */,
 				5ABDAC6C196187D600AFF6C9 /* Foundation.framework */,
 				5ABDAC6E196187D600AFF6C9 /* CoreGraphics.framework */,
 				5ABDAC70196187D700AFF6C9 /* UIKit.framework */,
@@ -114,9 +146,12 @@
 			children = (
 				5ABDAC7B196187D700AFF6C9 /* AppDelegate.h */,
 				5ABDAC7C196187D700AFF6C9 /* AppDelegate.m */,
-				5ABDAC7E196187D700AFF6C9 /* Main.storyboard */,
-				5ABDAC81196187D700AFF6C9 /* ViewController.h */,
-				5ABDAC82196187D700AFF6C9 /* ViewController.m */,
+				5ABDACBF19618ECE00AFF6C9 /* MainWindow.xib */,
+				5ABDACBA19618E0C00AFF6C9 /* GrawViewController.h */,
+				5ABDACBB19618E0C00AFF6C9 /* GrawViewController.m */,
+				5ABDACBC19618E0C00AFF6C9 /* GrawViewController.xib */,
+				5ABDACC1196190B000AFF6C9 /* SmoothLineView.h */,
+				5ABDACC2196190B000AFF6C9 /* SmoothLineView.m */,
 				5ABDAC84196187D700AFF6C9 /* Images.xcassets */,
 				5ABDAC73196187D700AFF6C9 /* Supporting Files */,
 			);
@@ -150,6 +185,28 @@
 				5ABDAC94196187D700AFF6C9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5ABDACA319618DAC00AFF6C9 /* spline */ = {
+			isa = PBXGroup;
+			children = (
+				5ABDACA419618DAC00AFF6C9 /* BezierCurve.h */,
+				5ABDACA519618DAC00AFF6C9 /* BezierCurve.m */,
+				5ABDACA619618DAC00AFF6C9 /* CatmullRomSpline.h */,
+				5ABDACA719618DAC00AFF6C9 /* CatmullRomSpline.m */,
+				5ABDACA819618DAC00AFF6C9 /* CGPointArithmetic.h */,
+				5ABDACA919618DAC00AFF6C9 /* CubicBezierCurve.h */,
+				5ABDACAA19618DAC00AFF6C9 /* CubicBezierCurve.m */,
+				5ABDACAB19618DAC00AFF6C9 /* LinearBezierCurve.h */,
+				5ABDACAC19618DAC00AFF6C9 /* LinearBezierCurve.m */,
+				5ABDACAD19618DAC00AFF6C9 /* NSArray_PointArray.h */,
+				5ABDACAE19618DAC00AFF6C9 /* NSArray_PointArray.m */,
+				5ABDACAF19618DAC00AFF6C9 /* QuadraticBezierCurve.h */,
+				5ABDACB019618DAC00AFF6C9 /* QuadraticBezierCurve.m */,
+				5ABDACB119618DAC00AFF6C9 /* Spline.h */,
+				5ABDACB219618DAC00AFF6C9 /* Spline.m */,
+			);
+			path = spline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ABDACC019618ECE00AFF6C9 /* MainWindow.xib in Resources */,
 				5ABDAC85196187D700AFF6C9 /* Images.xcassets in Resources */,
 				5ABDAC77196187D700AFF6C9 /* InfoPlist.strings in Resources */,
-				5ABDAC80196187D700AFF6C9 /* Main.storyboard in Resources */,
+				5ABDACBE19618E0C00AFF6C9 /* GrawViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +307,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ABDAC83196187D700AFF6C9 /* ViewController.m in Sources */,
+				5ABDACB519618DAC00AFF6C9 /* CubicBezierCurve.m in Sources */,
+				5ABDACB819618DAC00AFF6C9 /* QuadraticBezierCurve.m in Sources */,
 				5ABDAC7D196187D700AFF6C9 /* AppDelegate.m in Sources */,
+				5ABDACB919618DAC00AFF6C9 /* Spline.m in Sources */,
+				5ABDACB419618DAC00AFF6C9 /* CatmullRomSpline.m in Sources */,
+				5ABDACB319618DAC00AFF6C9 /* BezierCurve.m in Sources */,
+				5ABDACC3196190B000AFF6C9 /* SmoothLineView.m in Sources */,
 				5ABDAC79196187D700AFF6C9 /* main.m in Sources */,
+				5ABDACB619618DAC00AFF6C9 /* LinearBezierCurve.m in Sources */,
+				5ABDACB719618DAC00AFF6C9 /* NSArray_PointArray.m in Sources */,
+				5ABDACBD19618E0C00AFF6C9 /* GrawViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,14 +346,6 @@
 				5ABDAC76196187D700AFF6C9 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5ABDAC7E196187D700AFF6C9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5ABDAC7F196187D700AFF6C9 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		5ABDAC94196187D700AFF6C9 /* InfoPlist.strings */ = {
@@ -379,6 +437,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Onemind/Onemind-Prefix.pch";
 				INFOPLIST_FILE = "Onemind/Onemind-Info.plist";
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,6 +451,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Onemind/Onemind-Prefix.pch";
 				INFOPLIST_FILE = "Onemind/Onemind-Info.plist";
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +516,7 @@
 				5ABDAC9D196187D700AFF6C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5ABDAC9E196187D700AFF6C9 /* Build configuration list for PBXNativeTarget "OnemindTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +525,7 @@
 				5ABDACA0196187D700AFF6C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
