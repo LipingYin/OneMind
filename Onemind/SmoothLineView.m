@@ -21,9 +21,11 @@ CGPoint midPoint(CGPoint p1, CGPoint p2);
 @end
 
 @implementation SmoothLineView
+@synthesize delegate;
+@synthesize lineColor;
+@synthesize lineWidth;
 
 #pragma mark -
-
 -(void)setup
 {
     self.lineWidth = DEFAULT_WIDTH;
@@ -82,8 +84,15 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
     CGPoint mid1    = midPoint(previousPoint1, previousPoint2); 
     CGPoint mid2    = midPoint(currentPoint, previousPoint1);
     
-    NSLog(@"mid1.x=:%f  mid1.y=:%f",mid1.x,mid1.y);
-    NSLog(@"mid2.x=:%f  mid2.y=:%f",mid2.x,mid2.y);
+    if (currentPoint.x<self.frame.size.width/2) {
+        [delegate curLeftPoints:currentPoint];
+    }else
+    {
+        [delegate curRightPoints:currentPoint];
+        
+    }
+
+    
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, mid1.x, mid1.y);
     CGPathAddQuadCurveToPoint(path, NULL, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);
@@ -114,8 +123,10 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
     [curImage drawAtPoint:CGPointMake(0, 0)];
     CGPoint mid1 = midPoint(previousPoint1, previousPoint2); 
     CGPoint mid2 = midPoint(currentPoint, previousPoint1);
-
-    CGContextRef context = UIGraphicsGetCurrentContext(); 
+    
+    //
+   
+    CGContextRef context = UIGraphicsGetCurrentContext();
     
     [self.layer renderInContext:context];
 
@@ -139,7 +150,7 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
     [super dealloc];
 }
 
-@synthesize lineColor,lineWidth;
+
 @end
 
 

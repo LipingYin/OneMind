@@ -7,13 +7,17 @@
 //
 
 #import "GrawViewController.h"
-#import "SmoothLineView.h"
+
 
 #define  RADIUS_REFERENCE 150
 #define  SIDE_LEN_REFEREBCE 140
+#define  LEFT_POINT_CENTER
+
 
 //参照物 圆&方
 @implementation ReferenceView
+
+
 -(void)drawRect:(CGRect)rect
 {
     CAShapeLayer *line =  [CAShapeLayer layer];
@@ -63,6 +67,36 @@
 
 @implementation GrawViewController
 
+/*判断点是否在环内的算法
+ 点到圆心的距离大于 小圆的半径140  小于大圆的半径160
+ */
+-(void)curLeftPoints:(CGPoint)curPoint
+{
+    NSLog(@"curPoint.x=:%f  curPoint.y=:%f",curPoint.x,curPoint.y);
+   
+    CGPoint leftPointcenter  = CGPointMake(self.view.frame.size.height/4, self.view.frame.size.width/2+15);
+     NSLog(@"leftPointcenter.x=:%f  leftPointcenter.y=:%f",leftPointcenter.x,leftPointcenter.y);
+    
+    //点到圆心的距离
+    double dist = sqrt ( pow((curPoint.x-leftPointcenter.x), 2) + pow((curPoint.y-leftPointcenter.y), 2) );
+    NSLog(@"%f",dist);
+    if (curPoint.x!=0&&curPoint.y!=0) {
+        if (dist<70||dist>80) {
+            [self failViewDidLoad];
+        }
+        
+    }
+   
+}
+/*判断点是否在矩形内的算法
+ 
+ */
+-(void)curRightPoints:(CGPoint)curPoint
+{
+    CGPoint point1  = CGPointMake(85,self.view.frame.size.height/2+SIDE_LEN_REFEREBCE/2);
+    //CGPoint point2  = CGPointMake();
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -90,12 +124,13 @@
 
     //左右画布
     SmoothLineView *ringtView =  [[SmoothLineView alloc] initWithFrame:CGRectMake(0, 0, 240, 320)];
+    ringtView.delegate = self;
     ringtView.backgroundColor = [UIColor clearColor];
     ringtView.lineColor = [UIColor blackColor];
     SmoothLineView *leftView =  [[SmoothLineView alloc] initWithFrame:CGRectMake(240, 0, 240, 320)];
     leftView.backgroundColor = [UIColor clearColor];
     leftView.lineColor = [UIColor whiteColor];
-    
+    leftView.delegate = self;
     [self.view addSubview:ringtView];
     [self.view addSubview:leftView];
     
@@ -111,19 +146,37 @@
 //失败界面
 -(void)failViewDidLoad
 {
-    UIView *failView = [[UIView alloc]initWithFrame:self.view.frame];
+    if (failView==nil) {
+        failView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.height, self.view.frame.size.width)];
+    }
     
-    UIButton *displayBtn = [[UIButton alloc]initWithFrame:CGRectMake(120, 300, 40,30 )];
+    failView.hidden = NO;
+    failView.backgroundColor = [UIColor redColor];
+    UIButton *displayBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 250, 40,30 )];
     [displayBtn setTitle:@"炫耀" forState:UIControlStateNormal];
-    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(120+50, 300, 40,30 )];
-    [displayBtn setTitle:@"返回" forState:UIControlStateNormal];
-    UIButton *againBtn = [[UIButton alloc]initWithFrame:CGRectMake(120+50, 300, 40,30 )];
-    [displayBtn setTitle:@"重来" forState:UIControlStateNormal];
+    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(225, 250, 40,30 )];
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+     [backBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *againBtn = [[UIButton alloc]initWithFrame:CGRectMake(350, 250, 40,30 )];
     
+    [againBtn setTitle:@"重来" forState:UIControlStateNormal];
+    [againBtn addTarget:self action:@selector(againAction) forControlEvents:UIControlEventTouchUpInside];
     [failView addSubview:displayBtn];
     [failView addSubview:backBtn];
     [failView addSubview:againBtn];
     
+    [self.view addSubview:failView];
+    
+}
+//重来
+-(void)againAction
+{
+    
+}
+//返回
+-(void)backAction
+{
+    failView.hidden = YES;
 }
 
 //隐藏状态栏

@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SmoothLineView.h"
 
-@interface GrawViewController : UIViewController
+@interface GrawViewController : UIViewController<CurPointsDelegate>
+{
+    UIView *failView;
+}
 
 @end
-
 @interface ReferenceView : UIView
 
 @end
+
