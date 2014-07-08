@@ -24,6 +24,7 @@ CGPoint midPoint(CGPoint p1, CGPoint p2);
 @synthesize delegate;
 @synthesize lineColor;
 @synthesize lineWidth;
+@synthesize status;
 
 #pragma mark -
 -(void)setup
@@ -79,20 +80,15 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
     previousPoint2  = previousPoint1;
     previousPoint1  = [touch previousLocationInView:self];
     currentPoint    = [touch locationInView:self];
+    NSLog(@"currentPointX:%f,currentPointY;%f",currentPoint.x,currentPoint.y);
+    [delegate curLeftPoints:currentPoint status:status];
+    
     
     // calculate mid point
     CGPoint mid1    = midPoint(previousPoint1, previousPoint2); 
     CGPoint mid2    = midPoint(currentPoint, previousPoint1);
-    
-    if (currentPoint.x<self.frame.size.width/2) {
-        [delegate curLeftPoints:currentPoint];
-    }else
-    {
-        [delegate curRightPoints:currentPoint];
-        
-    }
 
-    
+
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, mid1.x, mid1.y);
     CGPathAddQuadCurveToPoint(path, NULL, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);

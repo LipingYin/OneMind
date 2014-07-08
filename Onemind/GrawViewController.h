@@ -12,6 +12,9 @@
 @interface GrawViewController : UIViewController<CurPointsDelegate>
 {
     UIView *failView;
+    
+    UILabel *disTipLeft;
+    UILabel *disTipRingt;
 }
 
 @end
